@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1536210888 source:d:\utn\c\guia\tp1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"myolib.h"
+
+1536195452 d:\utn\c\guia\tp1\myolib.h
+
+1536208122 source:d:\utn\c\guia\tp1\myolib.c
+
