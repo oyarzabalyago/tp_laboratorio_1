@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1536210888 source:d:\utn\c\guia\tp1\main.c
+1536278847 source:d:\utn\c\guia\tp1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"myolib.h"

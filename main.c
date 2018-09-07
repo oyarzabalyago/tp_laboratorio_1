@@ -22,18 +22,22 @@ int main()
         printf("Elija una opcion:\n");
         printf("1 - Ingresar 1er operando \n");
         printf("2 - Ingresar 2do operando \n");
-        printf("3 - Calcular todas las operaciones\n\n");
+        printf("3 - Calcular todas las operaciones \n");
+        printf("4 - Informar resultados \n");
+        printf("5 - Salir \n\n");
 
         // capturo el valor del menu
         scanf("%d", &menu);
-        while(menu <0 || menu >4)
+        while(menu <0 || menu >6)
         {
             system("cls");
             printf("Error al elegir opcion del menu\n\n");
             printf("Elija una opcion nuevamente:\n");
             printf("1 - Ingresar 1er operando \n");
             printf("2 - Ingresar 2do operando \n");
-            printf("3 - Calcular todas las operaciones\n\n");
+            printf("3 - Calcular todas las operaciones \n");
+            printf("4 - Informar resultados \n");
+            printf("5 - Salir \n\n");
             scanf("%d", &menu);
         }
 
@@ -80,14 +84,25 @@ int main()
                     }
                     else
                     {
-                        printf("Error, primero ingrese el valor de X (Opcion menu 1)\n\n\n2");
+                        printf("Error, primero ingrese el valor de X (Opcion menu 1)\n\n\n");
                     }
                     break;
 
-
             case 3:
-
                     if(2==flag)
+                    {
+                        printf("Los Calculos se han realizado \n\n\n");
+                        flag=3;
+                    }
+                    else
+                    {
+                        printf("Error, no ha ingresado todos los numeros \n\n\n");
+                    }
+                    break;
+
+            case 4:
+
+                    if(3==flag)
                     {
                         // muestro el resultados de las funciones en pantalla
                         printf("El resultado de %d+%d es: %d\n",num1,num2,sumarvalores(num1,num2));
@@ -101,7 +116,7 @@ int main()
                         {
                             printf("No es posible dividir por cero");
                         }
-                        printf("El factorial de %d es: %d y El factorial de %d es: %d\n",num1,factorialvalores(num1),num2,factorialvalores(num2));
+                        printf("El factorial de %d es: %d y El factorial de %d es: %d\n\n\n",num1,factorialvalores(num1),num2,factorialvalores(num2));
 
                         break;
                     }
@@ -109,11 +124,16 @@ int main()
                     {
                         printf("Error, primeramente debe ingresar los valores a calcular");
                     }
-            default:    printf("Por favor ingrese un valor entre 1 y 3\n\n");
+
+            case 5: break;
+
+            default:    printf("Por favor ingrese un valor entre 1 y 5\n\n");
 
         }
 
-    }while(1);
+    }while(menu!=5);
+
+    printf("\n\n Gracias por usar la calculadora!\n\n");
 
     return 0;
 }
